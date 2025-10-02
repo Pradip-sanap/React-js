@@ -6,6 +6,8 @@ import { StateLearning } from './StateInReact';
 import Calculator from './Calculator';
 import UserDashboard from './UserDashboard';
 import Navbar from './Navbar';
+import ApiCall from './ApiCall';
+import { Excuser } from './Excuser';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,8 +20,13 @@ root.render(
     {/* <Calculator /> */}
 
     {/* useEffect hook learning & component lifecycle */}
-    <UserDashboard />
-    <Navbar />
+    {/* <UserDashboard />
+    <Navbar /> */}
+
+    {/* fetching data  */}
+    {/* <ApiCall /> */}
+    <Excuser />
+
   </React.StrictMode>
 );
 
