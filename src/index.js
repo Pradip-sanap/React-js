@@ -4,6 +4,8 @@ import App from './App';
 import App2 from './App2'
 import { StateLearning } from './StateInReact';
 import Calculator from './Calculator';
+import UserDashboard from './UserDashboard';
+import Navbar from './Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +15,11 @@ root.render(
 
     {/* <StateLearning /> */}
 
-    <Calculator />
+    {/* <Calculator /> */}
+
+    {/* useEffect hook learning & component lifecycle */}
+    <UserDashboard />
+    <Navbar />
   </React.StrictMode>
 );
 

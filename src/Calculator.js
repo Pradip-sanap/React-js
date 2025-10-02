@@ -6,10 +6,11 @@ export default function Calculator() {
     let [todolist, setToDoList] = useState([]);
     let [newTask, setNewTask] = useState("");
     const handleChange = (event)=>{
+        // console.log(event.target.value)
         setNewTask(event.target.value);
     }
 
-    const addNewTask = ()=>{
+    const addNewTask = () => {
         const task = {
             id:  todolist.length===0 ? 1 :  todolist[todolist.length-1].id + 1,
             taskName: newTask,
@@ -49,8 +50,8 @@ export default function Calculator() {
                   {
                       todolist.map((task, event)=>{
                           return (
-                              <div>
-                                  <h1 style={{color: task.completed ? "green":"black"}}>{task.id} -- {task.taskName}</h1>
+                              <div style={{backgroundColor: task.completed ? "green":"orange"}}>
+                                  <h1 >{task.id} -- {task.taskName}</h1>
                                   <button onClick={()=>completeTask(task.id)}>
                                       {!task.completed  ? <span>Check</span> : <span>uncheck</span> }
                                   </button>
